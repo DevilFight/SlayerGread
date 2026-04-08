@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment</title>
+  <link rel="icon" href="https://files.catbox.moe/vsgm8f.jpeg">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .container, .main-content {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 2rem;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      display: none;
+      animation: fadeIn 1s ease;
+    }
+
+    .container {
+      display: block; /* supaya tetap tampil */
+    }
+
+    .profile-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .next-button {
+      background: linear-gradient(135deg, #00c9ff, #92fe9d);
+      color: #000;
+      font-weight: bold;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      min-width: 120px;
+      text-align: center;
+    }
+
+    .next-button:hover {
+      transform: scale(1.05);
+    }
+
+    .product {
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .product-img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 0.5rem;
+    }
+
+    .product h3 {
+      margin: 0.5rem 0;
+    }
+
+    .product p {
+      margin-bottom: 1rem;
+      color: #ddd;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="product">
+      <img src="https://files.catbox.moe/bd4mip.jpg" class="product-img" alt="Dana">
+      <h3>Dana</h3>
+      <p>A/N : T****H</p>
+      <button class="next-button" onclick="copyNumber('083804353600')">Copy</button>
+    </div>
+
+    <div class="product">
+      <img src="https://files.catbox.moe/u8gvag.jpg" class="product-img" alt="OVO">
+      <h3>OVO</h3>
+      <p>A/N : T****H</p>
+      <button class="next-button" onclick="copyNumber('083804353600')">Copy</button>
+    </div>
+
+    <div class="product">
+      <img src="https://files.catbox.moe/wfdj0o.jpg" class="product-img" alt="GoPay">
+      <h3>GoPay</h3>
+      <p>A/N : T****H</p>
+      <button class="next-button" onclick="copyNumber('083804353600')">Copy</button>
+    </div>
+
+    <div style="margin-top: 3rem; text-align: center;">
+      <h2 style="margin-bottom: 1rem;">Scan QRIS Untuk Pembayaran</h2>
+      <img src="https://files.catbox.moe/jsxedf.jpg" alt="QRIS"
+        style="max-width: 300px; width: 100%; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);" />
+    </div>
+
+  </div> <!-- INI YANG TADI KURANG -->
+
+  <script>
+    function copyNumber(number) {
+      navigator.clipboard.writeText(number)
+        .then(() => {
+          alert("Nomor berhasil disalin!");
+        })
+        .catch(() => {
+          alert("Gagal menyalin nomor.");
+        });
+    }
+  </script>
+
+</body>
+</html>
